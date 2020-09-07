@@ -10,6 +10,7 @@ class User < ApplicationRecord
          :recoverable, :rememberable, :validatable
   
   has_many :headings
+  has_friendship
 
   private
 
