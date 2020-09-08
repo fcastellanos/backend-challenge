@@ -9,3 +9,11 @@
         </ol>
     </nav>
 <% end %>
+
+<% if @data[:matchings].empty? %>
+    <div class="card" style="width: 40rem;">
+        <div class="card-body">
+            No matchings found
+        </div>
+    </div>
+<% end %>
