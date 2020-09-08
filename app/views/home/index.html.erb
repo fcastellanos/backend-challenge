@@ -1,1 +1,13 @@
 <h1>Experts Index</h1>
+<ul class="list-group">
+    <% @users.each do |user| %>
+        <a href="#" class="list-group-item list-group-item-action flex-column align-items-start">
+            <div class="d-flex w-100 justify-content-between">
+                <h5 class="mb-1"><%= user.full_name %></h5>
+                <small class="text-muted"><%= user.friends.count %> friend(s)</small>
+            </div>
+            <small class="text-muted"><%= user.short_url %></small>
+        </a>
+    <% end %>
+</ul>
+
