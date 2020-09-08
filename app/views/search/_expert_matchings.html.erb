@@ -1,0 +1,11 @@
+<p>Experts Results</p>
+
+<% @data[:matchings].each do |match| %>
+    <nav aria-label="breadcrumb" style="width: 40rem;">
+        <ol class="breadcrumb">
+            <li class="breadcrumb-item"><a href="<%= user_path(@data[:user]) %>"><%= @data[:user].full_name %></a></li>
+            <li class="breadcrumb-item"><a href="<%= user_path(match[:friend1]) %>"><%= match[:friend1].full_name %></a></li>
+            <li class="breadcrumb-item active" aria-current="page"><a href="<%= user_path(match[:friend2]) %>"><%= match[:friend2].full_name %></a></li>
+        </ol>
+    </nav>
+<% end %>

@@ -3,5 +3,7 @@ Rails.application.routes.draw do
   
   resources :users, only: [:show]
   
+  post 'search/show'
+  
   root to: "home#index"
 end

@@ -37,6 +37,13 @@
               </li>
             <% end %>
           </ul>
+          <% if request.env['PATH_INFO'].split("/")[1] == "users" %>
+            <%= form_with(url: search_show_path, html: { class: "form-inline mt-2 mt-md-0" }) do |form| %>
+              <%= form.text_field :term, placeholder: "Search", class: "form-control mr-sm-2" %>
+              <%= form.hidden_field :user_id, value: request.env['PATH_INFO'].split("/")[2] %>
+              <%= form.submit "Search", class: "btn btn-outline-success my-2 my-sm-0" %>
+            <% end %>
+          <% end %>
         </div>
       </nav>
     </header>
