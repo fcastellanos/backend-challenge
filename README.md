@@ -49,3 +49,14 @@ We encourage the use of any libraries for everything except the search functiona
 * Remember to make meaningful commits as you work
 * Somehow share your repository with us
 * __Important:__ If there are credentials required (.env or master.key file), please email these to us directly or we can’t review your project
+
+
+### TODO's
+- [x] Create users
+- [x] Extract headings from user website
+- [x] Shorten website url
+- [x] List users
+- [x] Search header matchings
+- [ ] Include heading text in matchings result
+- [ ] Counter cache for friends count
+- [ ] Tests
