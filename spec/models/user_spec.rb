@@ -2,28 +2,28 @@
 
 RSpec.describe User, type: :model do
     context "validations" do
-        it "does not save without email" do
+        it "validates the presence of email" do
             user = User.new
 
             expect(user).to_not be_valid
             expect(user.errors.messages[:email]).to eq ["can't be blank"]
         end
 
-        it "does not save without password" do
+        it "validates the presence of password" do
             user = User.new
 
             expect(user).to_not be_valid
             expect(user.errors.messages[:password]).to eq ["can't be blank"]
         end
 
-        it "does not save without full_name" do
+        it "validates the presence of full_name" do
             user = User.new
 
             expect(user).to_not be_valid
             expect(user.errors.messages[:full_name]).to eq ["can't be blank"]
         end
 
-        it "does not save without website_url" do
+        it "validates the presence of website_url" do
             user = User.new
 
             expect(user).to_not be_valid
@@ -76,7 +76,7 @@ RSpec.describe User, type: :model do
 
         it "enqueues a fetch user headings job in after_create" do
             ActiveJob::Base.queue_adapter = :test
-            
+
             User.create(
                 full_name: 'Fernando Castellanos', 
                 email: 'fernando@mail.com', 
