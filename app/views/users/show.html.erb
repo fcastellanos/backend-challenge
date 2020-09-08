@@ -1,0 +1,9 @@
+<div class="card" style="width: 40rem;">
+  <div class="card-body">
+    <h5 class="card-title"><%= @user.full_name %></h5>
+    <h6 class="card-subtitle mb-2 text-muted"><%= @user.friends.count %> friend(s)</h6>
+    <p class="card-text"><%= @user.headings.pluck(:content).join("\n") %></p>
+    <a href="<%= @user.website_url %>" class="card-link">Full URL</a>
+    <a href="<%= @user.short_url %>" class="card-link">Short URL</a>
+  </div>
+</div>
